@@ -5,13 +5,12 @@ using namespace std;
 
 class convertir {
 private:
-	int  numero, unidades, decenas, centenas, millares, valor,n,i,num;
-	string Rom;
+	int  numero, unidades, decenas, centenas, millares;
 public:
 	void Roma();
-	void Arab();
 
 };
+
 
 void convertir::Roma() {
 	while (1) {
@@ -68,41 +67,5 @@ void convertir::Roma() {
 	}
 }
 
-
-
-void convertir::Arab() {
-	cout << "Escribe el numero romano: "; cin >> Rom;
-	n = stoi(Rom);
-	for (i = 0; i < n; i++) {
-		if (Rom[i] == 'I' || Rom[i] == 'i')
-			valor = 1;
-		if (Rom[i] == 'V' || Rom[i] == 'v')
-			valor = 5;
-		if (Rom[i] == 'X' || Rom[i] == 'x')
-			valor = 10;
-		if (Rom[i] == 'L' || Rom[i] == 'l')
-			valor = 50;
-		if (Rom[i] == 'C' || Rom[i] == 'c')
-			valor = 100;
-		if (Rom[i] == 'D' || Rom[i] == 'd')
-			valor = 500;
-		if (Rom[i] == 'M' || Rom[i] == 'm')
-			valor = 1000;
-	}
-	for (i = 0; i < n; i++) {
-		if (i == n - 1) {
-			num += valor;
-		else
-			if (valor(i >= valor[i + 1])) {
-				num + valor[i];
-			else
-				num - valor[i];
-			}
-		cout << num;
-
-		}
-		}
-		return;
-}
 
 	

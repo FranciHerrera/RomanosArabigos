@@ -1,12 +1,15 @@
 #include <iostream>
-#include "Clase.h"
+#include "Romanos.h"
+#include "Arabigos.h"
 
 using namespace std;
 
+
 int main()
 {
-    int opcion;
+    int opcion, number;
     convertir obj;
+    string Rom;
     do {
         cout << "-------------------------------------\n";
         cout << "Bienvenido \n";
@@ -31,21 +34,24 @@ int main()
                 return 0;
             }
         case 2:
-            obj.Arab();
-            cout << "\n ¿Desea hacer algo mas? \n Si = 1 \n No = presione cualquier numero \n";
-            cin >> opcion;
-            if (opcion == 1) {
-                break;
+            cout << "Ingresa un numero entre 1 y 3999 para convertirlo a arabigo: ";cin >> Rom;
+            Converter c(Rom);
+            number = c.RomanToArabic();
+            if (number > 0) {
+                cout << "\n";
+                cout << "Numero romano convertido: " << number;
+                cout << "\n";
             }
-            else {
-                return 0;
-            }
-
-        case 3:
-            return 0;
-        default:
-            cout << "\n No disponible >:/ \n";
+            else cout << "No pongas eso wey \n";
+        cout << "\n ¿Desea hacer algo mas? \n Si = 1 \n No = presione cualquier numero \n";
+        cin >> opcion;
+        if (opcion == 1) {
             break;
         }
-    } while (opcion != 3);
+        else {
+            return 0;
+        }
+    }
+    } while (opcion != 3); {
+    }
 }
