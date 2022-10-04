@@ -1,9 +1,7 @@
 #include <iostream>
 #include "Romanos.h"
-#include "Arabigos.h"
 
 using namespace std;
-
 
 int main()
 {
@@ -13,8 +11,8 @@ int main()
     do {
         cout << "-------------------------------------\n";
         cout << "Bienvenido \n";
-        cout << "--------------------------------- \n";
-        cout << "¿Que quieres hacer? \n";
+        cout << "-------------------------------------\n";
+        cout << "Que quieres hacer? \n";
         cout << "1 - Convertir arabigos a romanos \n";
         cout << "2 - Convertitr romanos a arabigos \n";
         cout << "3 Salir del programa";
@@ -24,28 +22,31 @@ int main()
 
         switch (opcion) {
         case 1:
+            system("cls");
             obj.Roma();
             cout << "\n ¿Desea hacer algo mas? \n Si = 1 \n No = presione cualquier numero \n";
             cin >> opcion;
             if (opcion == 1) {
+                system("cls");
                 break;
             }
             else {
                 return 0;
             }
         case 2:
-            cout << "Ingresa un numero entre 1 y 3999 para convertirlo a arabigo: ";cin >> Rom;
-            Converter c(Rom);
-            number = c.RomanToArabic();
+            system("cls");
+            cout << "Ingresa un numero entre 1 y 3999 para convertirlo a arabigo: "; cin >> Rom;
+            RTA c(Rom);
+            number = c.ra();
             if (number > 0) {
                 cout << "\n";
-                cout << "Numero romano convertido: " << number;
-                cout << "\n";
+                cout << number;
             }
-            else cout << "No pongas eso wey \n";
+            else cout << "Valor no aceptado \n";
         cout << "\n ¿Desea hacer algo mas? \n Si = 1 \n No = presione cualquier numero \n";
         cin >> opcion;
         if (opcion == 1) {
+            system("cls");
             break;
         }
         else {
